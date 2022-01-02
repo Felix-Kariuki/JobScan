@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15dp"
+    tools:context=".fragments.SearchFragment">
+    
+    <EditText
+        android:id="@+id/etS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search....."
+        android:minHeight="48dp"
+        android:inputType="text"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchJobs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="50dp"
+        />
+    
+</LinearLayout>
