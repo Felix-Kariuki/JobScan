@@ -8,7 +8,7 @@ import com.flexcode.jobscan.models.JobToSave
 interface JobDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertJob(job:JobToSave): Long
+    suspend fun insertJob(job: JobToSave): Long
 
     @Query("SELECT * FROM job ORDER BY id DESC")
     fun getAllJob(): LiveData<List<JobToSave>>
