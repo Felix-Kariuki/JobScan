@@ -47,16 +47,16 @@ class JobSavedAdapter constructor(
 
             Glide.with(this)
                 .load(currentJob.companyLogoUrl)
-                .into(binding!!.ivCompanyLogo)
+                .into(binding?.ivCompanyLogo!!)
 
-            binding!!.tvCompanyName.text = currentJob.companyName
-            binding!!.tvJobLocation.text = currentJob.candidateRequiredLocation
-            binding!!.tvJobTitle.text = currentJob.title
-            binding!!.tvJobType.text = currentJob.jobType
-            binding!!.ibDelete.visibility = View.VISIBLE
+            binding?.tvCompanyName?.text = currentJob.companyName
+            binding?.tvJobLocation?.text = currentJob.candidateRequiredLocation
+            binding?.tvJobTitle?.text = currentJob.title
+            binding?.tvJobType?.text = currentJob.jobType
+            binding?.ibDelete?.visibility = View.VISIBLE
 
             val dateJob = currentJob.publicationDate!!.split("T")
-            binding!!.tvDate.text = dateJob[0]
+            binding?.tvDate?.text = dateJob?.get(0)
         }.setOnClickListener { view ->
             val tags = arrayListOf<String>()
             val job = Job(
@@ -73,10 +73,10 @@ class JobSavedAdapter constructor(
         }
 
         holder.apply {
-            binding!!.ibDelete.setOnClickListener {
+            binding?.ibDelete?.setOnClickListener {
                 itemClick.onItemClick(
                     currentJob,
-                    binding!!.ibDelete,
+                    binding?.ibDelete!!,
                     position
                 )
             }

@@ -51,15 +51,16 @@ class JobAdapter : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
             Glide.with(this)
                 .load(currentJob.companyLogoUrl)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(binding!!.ivCompanyLogo)
+                .into(binding?.ivCompanyLogo!!)
 
-            binding!!.tvCompanyName.text = currentJob.companyName
-            binding!!.tvJobLocation.text = currentJob.candidateRequiredLocation
-            binding!!.tvJobTitle.text = currentJob.title
-            binding!!.tvJobType.text = currentJob.jobType
+            binding?.tvCompanyName?.text = currentJob.companyName
+            binding?.tvJobLocation?.text = currentJob.candidateRequiredLocation
+            binding?.tvJobTitle?.text = currentJob.title
+            binding?.tvJobType?.text = currentJob.jobType
 
             val dateJob = currentJob.publicationDate!!.split("T")
-            binding!!.tvDate.text = dateJob[0]
+            binding?.tvDate?.text = dateJob.get(0)
+
         }.setOnClickListener { view ->
             val direction = MainFragmentDirections
                 .actionMainFragmentToJobDetailsFragment(currentJob)

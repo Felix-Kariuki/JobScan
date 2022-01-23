@@ -6,6 +6,21 @@
     app:startDestination="@id/mainFragment">
 
     <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.flexcode.jobscan.fragments.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_jobDetailsFragment"
+            app:destination="@id/jobDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/jobDetailsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
         android:id="@+id/jobDetailsFragment"
         android:name="com.flexcode.jobscan.fragments.JobDetailsFragment"
         android:label="JobDetailsFragment"
@@ -23,20 +38,5 @@
             android:name="job"
             app:argType="com.flexcode.jobscan.models.Job"
             app:nullable="true"/>
-    </fragment>
-    <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.flexcode.jobscan.fragments.MainFragment"
-        android:label="MainFragment"
-        tools:layout="@layout/fragment_main">
-        <action
-            android:id="@+id/action_mainFragment_to_jobDetailsFragment"
-            app:destination="@id/jobDetailsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/jobDetailsFragment"
-            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
