@@ -14,8 +14,12 @@
 
 * Architecture components
 
+* Room
+
 * Retrofit
 
 * MVVM Architecure
 
 * Other Android Jetpack components
+
+[LICENSE](LICENSE)
