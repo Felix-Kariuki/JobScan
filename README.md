@@ -4,7 +4,7 @@
  
 ## Data Source
 
-[News Api](https://remotive.io/remote-rest-api-jobs)
+[Remotive Api](https://remotive.io/remote-rest-api-jobs)
 
 # Tools and technologies
 
